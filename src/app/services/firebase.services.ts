@@ -13,7 +13,7 @@ export class FirebaseService {
      
    }
 
-   getMembers(gender: string = null) {
+   getMembers(gender: string = null): AngularFireList<Member> {
        if (gender != null) {
            this.members = this.af.list('/members', 
            	ref => ref.orderByChild('gender').equalTo(gender)) as AngularFireList<Member>;
@@ -21,6 +21,20 @@ export class FirebaseService {
            this.members = this.af.list('/members') as AngularFireList<Member>;
        }
        return this.members;
+   }
+
+   updatePropLikes(key, newVal): void {
+     // var memberToUpdate = this.af.list('/members', 
+     //         ref => ref.orderByKey().equalTo(key)) as AngularFireList<Member>;
+     // memberToUpdate.snapshotChanges().subscribe(actions => {
+     //    actions.forEach(action => {
+     //      //console.log(action.type);
+     //      //console.log(action.key);
+     //      console.log(action.payload.val());
+     //    });
+     //  });
+      this.af.object('/members/' + key)
+          .update({ likes: newVal});
    }
 
    // getCategories() {
@@ -54,7 +68,7 @@ export interface Member {
    likes?: number;
 }
 
-// export interface Category {
-//    $key?: string;
-//    name?: string;
-// }
+export interface Gender {
+   $key?: string;
+   value?: string;
+}
