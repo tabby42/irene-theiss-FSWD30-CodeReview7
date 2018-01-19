@@ -37,14 +37,16 @@ button {
 	-webkit-transition: all 0.6s ease;
 	transition: all 0.6s ease;
 	outline: 0;
-	
 }
 
 button:hover, 
 button:focus {
 	-webkit-transform: scale(1.1);
 	        transform: scale(1.1);
-		    	
+}
+
+.label {
+	float: left;
 }
 
 
