@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   
-  private projectName:string;
+  public projectName:string;
+  public isCollapsed = true;
 
   constructor() { 
   	this.projectName = "CodeFactory";

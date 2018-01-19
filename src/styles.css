@@ -1,5 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
-.jumbotron {
-     background: url('https://www.codefactory.wien/www/test/wp-content/uploads/2016/12/wall-dark.png') no-repeat center center;
-     color: white;
+/*Fonts*/
+/* $fontFam: 'Courier', sans-serif;
+$heavy: 900;
+$bold: 700;
+$regular: 400;
+$base-font-size: 14px; */
+
+/*Colors*/
+/* $textcolor: #222;
+$pink: #C13ABB;
+$white: #fff; */
+
+body {
+	font-family: 'Courier', sans-serif;
+	font-size: 14px;
+}
+
+.pink {
+	color: #C13ABB
+}
+
+.white {
+	color: #fff;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+.container-fluid .jumbotron {
+     background: url('./assets/img/computer-1245714_1280.jpg') no-repeat center center;
+	 background-attachment: fixed;
+	 background-size: cover;
+     border-radius: 0;
+	 height: 70vh;
+	 -webkit-filter: grayscale(90%);
+	        filter: grayscale(90%);
+}
+
+.container-fluid.img-container {
+	width:  90%;
+	margin: 0 auto;
+}
+
+
+/*Jumbotron*/
+.jumbotron  .hero-img {
+	position: relative;
+	height: 100%;
+}
+
+.jumbotron  .hero-img h1 {
+	position: absolute;
+	top:  50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	color: #222;
+	text-align: center;
+	font-weight: normal;
+	padding: 30px;
+	background-color: #fff;
+    font-size: 2em;
+    margin: 0.67em 0;
 }

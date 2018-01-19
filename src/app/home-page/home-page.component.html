@@ -1,33 +1,35 @@
-<div class="container marketing">
- <!-- Three columns of text below the carousel -->
- <div class="row">
-   <div class="col-lg-4">
-     <img class="img-circle" src="https://www.codefactory.wien/www/test/wp-content/uploads/2016/11/html-css-2-1.png" alt="Generic placeholder image"
-       width="140" height="140">
-     <h2>BASIC COURSE HTML / CSS</h2>
-     <p>In this course, you will learn the building blocks of both HTML and CSS, which are the foundation the web is build
-       on. At the end o fit, you will be able to create your first web page from scratch. More information</p>
-     <p><a class="btn btn-default" href="https://www.codefactory.wien/courses-programs/" role="button">View details &raquo;</a></p>
-   </div>
-   <!-- /.col-lg-4 -->
-   <div class="col-lg-4">
-     <img class="img-circle" src="https://www.codefactory.wien/www/test/wp-content/uploads/2016/11/javascript2.png" alt="Generic placeholder image"
-       width="140" height="140">
-     <h2>BASIC COURSE JavaScript</h2>
-     <p>In this course, you will learn the basic concepts and mechanisms behind JavaScript and how to use them. By using things
-       like data-types, functions, loops and objects you will create your first interactive web page. More information</p>
-     <p><a class="btn btn-default" href="https://www.codefactory.wien/courses-programs/" role="button">View details &raquo;</a></p>
-   </div>
-   <!-- /.col-lg-4 -->
-   <div class="col-lg-4">
-     <img class="img-circle" src="https://www.codefactory.wien/www/test/wp-content/uploads/2016/12/full-stack-web-development.jpg"
-       alt="Generic placeholder image" width="140" height="140">
-     <h2>Full Stack Web Development</h2>
-     <p>In this course, you will learn the basic concepts and mechanisms behind JavaScript and how to use them. By using things
-       like data-types, functions, loops and objects you will create your first interactive web page. More information</p>
-     <p><a class="btn btn-default" href="https://www.codefactory.wien/courses-programs/" role="button">View details &raquo;</a></p>
-   </div>
-   <!-- /.col-lg-4 -->
- </div>
- <!-- /.row -->
-</div>
+<hero></hero>
+<!-- <h1>huhu</h1>
+<ul *ngFor="let member of members">
+ <li>{{member.name}}</li>
+</ul> -->
+<div class="container-fluid img-container">
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let member of members">
+      <figure class="">
+        <span class="label label-info">
+           <span *ngIf="member.inRelation;then inrel else rel">here is ignored</span>
+            <ng-template #inrel><i class="fas fa-ban"></i></ng-template>
+            <ng-template #rel><i class="fas fa-heart"></i></ng-template>
+        </span>
+        <span class="label label-default">
+           <span *ngIf="member.gender == 'male';then male else female">here is ignored</span>
+            <ng-template #male><i class="fas fa-mars"></i></ng-template>
+            <ng-template #female><i class="fas fa-venus"></i></ng-template>
+        </span>
+        <img [src]="member.imageUrl" alt="Member Photo">
+        <figcaption class="flex-figure">
+          <h3>{{member.name}} {{member.surname}}</h3>
+          <p><b>Age </b>{{member.age}}</p>
+          <p><b>Favorite Performers</b></p>
+          <p *ngFor="let performer of member.favoritePerformers">
+            {{performer}}<br>
+          </p>
+          <p><b>Likes </b><span class="likes">{{member.likes}}</span>
+           <button type="button" class="white like-btn"><i class="fas fa-heart fa-sm"></i></button>
+          </p>
+        </figcaption>
+      </figure><!--/figure -->
+    </div><!--/col -->
+  </div><!--/row -->
+</div><!--/container -->

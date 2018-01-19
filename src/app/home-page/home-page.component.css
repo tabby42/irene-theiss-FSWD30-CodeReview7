@@ -1,0 +1,54 @@
+img {
+	max-width: 100px;
+	padding: 10px;
+}
+
+figure {
+	border: 2px dotted #C13ABB;
+	padding: 10px;
+	text-align: right;
+	margin-bottom:  30px;
+}
+
+figcaption {
+	text-align: left;
+	color: #222;
+	font-size: 16px;
+    line-height: 1.1;
+    padding: 10px;
+}
+
+h3 {
+    margin: 0;
+	font-weight: normal;
+}
+
+p {
+	margin: 7px;
+}
+
+button {
+	cursor: pointer;
+	background-color: #C13ABB;
+	border: 0;
+	float: right;
+    border-radius: 100%;
+	padding: 7px 9px;
+	-webkit-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+	outline: 0;
+	
+}
+
+button:hover, 
+button:focus {
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+		    	
+}
+
+
+
+
+
+
