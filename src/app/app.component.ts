@@ -19,7 +19,7 @@ import { FirebaseService } from './services/firebase.services';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [FirebaseService]
+  providers: []
 })
 export class AppComponent implements OnInit {
     //properties

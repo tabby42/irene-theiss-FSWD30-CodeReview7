@@ -19,6 +19,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 //routing
 import { AppRoutingModule } from './/app-routing.module';
+//
+import { FirebaseService } from './services/firebase.services';
+
 
 export const firebaseConfig = {
     apiKey: "AIzaSyBFbRgrDC6MdzoJ69u_zR2sUAva1wbjwkw",
@@ -52,7 +55,7 @@ export const firebaseConfig = {
     AngularFireAuthModule, 
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

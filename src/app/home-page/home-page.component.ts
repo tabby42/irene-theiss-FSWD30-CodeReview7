@@ -10,7 +10,7 @@ import { Member } from '../services/firebase.services';
   providers: [FirebaseService]
 })
 export class HomePageComponent implements OnInit {
-	//properties
+	  //properties
     members: Member[];
     //selectedMember: Member;
    
@@ -30,7 +30,6 @@ export class HomePageComponent implements OnInit {
         //console.log(members.map(business => business.$key));
         //return members.map(business => business.$key);
       });
-        //console.log(this.members);
     }
 
     updateLikes (key, newVal): void {

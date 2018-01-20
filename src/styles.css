@@ -70,8 +70,9 @@ figure {
 	border: 2px dotted #C13ABB;
 	padding: 10px;
 	text-align: right;
+	margin:  0;
 	margin-bottom:  30px;
-	min-height: 380px;
+	min-height: 400px;
 
 }
 

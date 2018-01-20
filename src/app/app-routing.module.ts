@@ -4,7 +4,6 @@ import { HomePageComponent }    from './home-page/home-page.component';
 import { AboutPageComponent }   from './about-page/about-page.component';
 import { MemberDetailComponent } from './member-detail/member-detail.component';
 
-
 const appRoutes: Routes = [
 	 {
 	   path: '', component: HomePageComponent
@@ -16,7 +15,6 @@ const appRoutes: Routes = [
 	 	path: 'detail/:id', component: MemberDetailComponent 
 	 }
 ];
-
 
 @NgModule({
 	imports: [ RouterModule.forRoot(appRoutes) ],

@@ -4,7 +4,6 @@ import { FirebaseService } from '../services/firebase.services';
 import { Member } from '../services/firebase.services';
 import { HomePageComponent } from '../home-page/home-page.component';
 
-
 @Component({
   selector: 'about-page',
   templateUrl: './about-page.component.html',
@@ -12,7 +11,7 @@ import { HomePageComponent } from '../home-page/home-page.component';
   providers: []
 })
 export class AboutPageComponent implements OnInit {
-  public members: Member[];
+  members: Member[];
 
   //inject Firebaseservice into AppComponent constructor
   constructor(private _firebaseService: FirebaseService) {

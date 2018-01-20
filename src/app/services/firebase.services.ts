@@ -6,13 +6,12 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class FirebaseService {
+  //property
   members: AngularFireList<Member>;
-  // categories: AngularFireList<Category>;
-  member: AngularFireList<Member>;
  
   constructor(private af: AngularFireDatabase) {
      
-   }
+  }
 
    getMembers(gender: string = null): AngularFireList<Member> {
      if (gender != null) {
@@ -25,17 +24,9 @@ export class FirebaseService {
    }
 
    getMember(key) {
-     // var val;
-     // val = this.af.object('/members/' + key).valueChanges();
-     // val = val.subscribe((v) => {
-     //   console.log('member: ', v);
-     // });
-     //console.log(this.getMembers());
-     //this.getMembers();
      //return this.af.object('/members/' + key);
      return this.af.list('/members', 
            ref => ref.orderByKey().equalTo(key)) as AngularFireList<Member>;
-     //console.log(this.member);
    }
 
    updatePropLikes(key, newVal): void {

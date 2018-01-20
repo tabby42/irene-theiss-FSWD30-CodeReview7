@@ -1,9 +1,20 @@
 .navbar-fixed-top {
 	background-color: #fff;
+	padding: 20px 0;
+    border-bottom: 2px dotted #C13ABB;
+    font-size: 16px;
 }
 
 .navbar-toggle .icon-bar {
 	background-color: #222;
+}
+
+.navbar-brand {
+	font-size: 22px;
+}
+
+.navbar-brand .pink {
+	padding: 0 3px;
 }
 
 a {

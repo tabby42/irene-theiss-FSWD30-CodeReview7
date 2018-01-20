@@ -10,12 +10,11 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'member-detail',
   templateUrl: './member-detail.component.html',
-  styleUrls: ['./member-detail.component.css'],
-  providers: [FirebaseService]
-
+  styleUrls: ['./member-detail.component.css']
 })
 export class MemberDetailComponent implements OnInit {
-  //This component  receives a member object through its member property and displays it
+  //This component  receives a member object through its member property 
+  //and displays it
   @Input() member: Member;
 
   constructor(
