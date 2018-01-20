@@ -9,6 +9,8 @@ const appRoutes: Routes = [
 	   path: '', component: HomePageComponent
 	 },
 	 {
+	   //try: add route filter/:gender, remove AboutPageComponent
+	   //instead reuse HomePageComponent and display members based on url parameter
 	   path: 'men', component: AboutPageComponent
 	 },
 	 { 
