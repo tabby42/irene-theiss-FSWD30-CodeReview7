@@ -1,8 +1,5 @@
 /*Fonts*/
 /* $fontFam: 'Courier', sans-serif;
-$heavy: 900;
-$bold: 700;
-$regular: 400;
 $base-font-size: 14px; */
 
 /*Colors*/
@@ -39,9 +36,8 @@ body {
 
 .container-fluid.img-container {
 	width:  90%;
-	margin: 0 auto;
+	margin: 100px auto;
 }
-
 
 /*Jumbotron*/
 .jumbotron  .hero-img {
@@ -63,3 +59,70 @@ body {
     font-size: 2em;
     margin: 0.67em 0;
 }
+
+/*Members Grid*/
+figure img {
+	max-width: 100px;
+	padding: 10px;
+}
+
+figure {
+	border: 2px dotted #C13ABB;
+	padding: 10px;
+	text-align: right;
+	margin-bottom:  30px;
+	min-height: 380px;
+
+}
+
+figcaption {
+	text-align: left;
+	color: #222;
+	font-size: 16px;
+    line-height: 1.1;
+    padding: 10px;
+}
+
+figure h3 {
+    margin: 0;
+	font-weight: normal;
+}
+
+figure p {
+	margin: 7px;
+}
+
+figure button {
+	cursor: pointer;
+	background-color: #C13ABB;
+	border: 0;
+	float: right;
+    border-radius: 100%;
+	padding: 7px 9px;
+	-webkit-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+	outline: 0;
+}
+
+figure button:hover, 
+figure button:focus {
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+}
+
+figure .label {
+	float: left;
+}
+
+.btn-detail {
+	clear: both;
+	display: block;
+	color:  #C13ABB;
+	font-weight: bold;
+}
+
+
+
+
+
+

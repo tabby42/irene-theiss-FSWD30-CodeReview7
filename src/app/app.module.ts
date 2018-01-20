@@ -12,19 +12,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { MemberDetailComponent } from './member-detail/member-detail.component';
 //AngularFire Modules
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
-const appRoutes: Routes = [
-	 {
-	   path: '', component: HomePageComponent
-	 },
-	 {
-	   path: 'about', component: AboutPageComponent
-	 },
-];
+//routing
+import { AppRoutingModule } from './/app-routing.module';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyBFbRgrDC6MdzoJ69u_zR2sUAva1wbjwkw",
@@ -43,7 +37,8 @@ export const firebaseConfig = {
     NavbarComponent,
     HeroComponent,
     HomePageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    MemberDetailComponent
   ],
   //specify dependencies
   imports: [
@@ -52,10 +47,10 @@ export const firebaseConfig = {
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     CollapseModule.forRoot(),
-	  RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule, 
-    AngularFireAuthModule
+    AngularFireAuthModule, 
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

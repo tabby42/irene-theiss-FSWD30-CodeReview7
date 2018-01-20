@@ -1,11 +1,6 @@
-<hero></hero>
-<!-- <div *ngIf="selectedMember">
-  <h2>{{ selectedMember.name | uppercase }} Details</h2>
-</div> -->
-<!-- <member-detail [member]="selectedMember"></member-detail> -->
 <div class="container-fluid img-container">
   <div class="row">
-    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let member of members">
+    <div class="col-lg-10 col-sm-12" *ngIf="member">
       <!-- <figure class="" (click)="onSelect(member)"> -->
         <figure class="">
           <span class="label" [class.label-danger]="member.inRelation" [class.label-success]="!member.inRelation">
@@ -28,11 +23,9 @@
             </p>
             <p><b>Likes </b><span class="likes">{{member.likes}}</span>
              <button (click)="updateLikes(member.$key, member.likes + 1)" type="button" class="white like-btn"><i class="fas fa-heart fa-sm"></i></button>
-             <a routerLink="/detail/{{member.$key}}" class="btn-detail">Details</a>
             </p>
           </figcaption>
         </figure><!--/figure -->
-      
     </div><!--/col -->
   </div><!--/row -->
 </div><!--/container -->

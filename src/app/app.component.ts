@@ -11,8 +11,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import { FirebaseService } from './services/firebase.services';
 //import models
-import { Member } from './services/firebase.services';
-//import { Category } from './services/firebase.services';
+//import { Member } from './services/firebase.services';
 
 //decorator plus class = Component
 @Component({
@@ -25,23 +24,14 @@ import { Member } from './services/firebase.services';
 export class AppComponent implements OnInit {
     //properties
     title: string = 'Coders Dating';
-    members: Member[];
+    //members: Member[];
    
     //inject Firebaseservice into AppComponent constructor
     constructor(private _firebaseService: FirebaseService) {
     }
 
     public ngOnInit() {
-	    // this._firebaseService.getMembers()
-     //  .snapshotChanges().map(actions => {
-     //  return actions.map(action => ({ $key: action.key, ...action.payload.val() }));
-     //  })
-     //  .subscribe(members => {
-     //    this.members = members;
-     //    console.log(this.members);
-     //    console.log(members.map(business => business.$key));
-     //    return members.map(business => business.$key);
-     //  });
+	  
 	  }
   
 }

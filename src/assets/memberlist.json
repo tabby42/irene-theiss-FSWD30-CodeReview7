@@ -1,0 +1,75 @@
+[
+	{
+        "name": "John",
+        "surname": "Doe",
+        "favoritePerformers": ["Sugar Pie DeSanto", "Keith Jarrett", "Angela Troendle"],
+        "age": 25,
+        "gender": "male",
+        "inRelation": false,
+        "imageUrl": "./assets/img/boy1.800x1000.jpg",  
+        "likes": 10
+    }, {
+        "name": "Mary",
+        "surname": "Member",
+        "favoritePerformers": ["LP", "Brad Mehldau", "Alan Rickman"],
+        "age": 29,
+        "gender": "female",
+        "inRelation": false,
+        "imageUrl": "./assets/img/girl1.800x1000.jpg",  
+        "likes": 12
+    }, {
+        "name": "Max",
+        "surname": "Mistletoe",
+        "favoritePerformers": ["Fiva MC", "Alice Phoebe Lou", "River Phoenix"],
+        "age": 22,
+        "gender": "male",
+        "inRelation": false,
+        "imageUrl": "./assets/img/boy2.800x1000.jpg",  
+        "likes":21
+    }, {
+        "name": "Julie",
+        "surname": "Doe",
+        "favoritePerformers": ["Nina Simone", "Bad Religion", "Propagandhi"],
+        "age": 26,
+        "gender": "female",
+        "inRelation": true,
+        "imageUrl": "./assets/img/girl2.800x1000.jpg",  
+        "likes": 19
+    }, {
+        "name": "Franz",
+        "surname": "Fichte",
+        "favoritePerformers": ["Dummy Data", "Dummy Data", "Dummy Data"],
+        "age": 32,
+        "gender": "male",
+        "inRelation": false,
+        "imageUrl": "./assets/img/boy2.800x1000.jpg",  
+        "likes": 14
+    }, {
+        "name": "Marie-Luise",
+        "surname": "Frühlingsbrise",
+        "favoritePerformers": ["Dummy Data", "Dummy Data", "Dummy Data"],
+        "age": 22,
+        "gender": "female",
+        "inRelation": true,
+        "imageUrl": "./assets/img/girl2.800x1000.jpg",  
+        "likes": 34
+    }, {
+        "name": "Joseph",
+        "surname": "Janker",
+        "favoritePerformers": ["Dummy Data", "Dummy Data", "Dummy Data"],
+        "age": 40,
+        "gender": "male",
+        "inRelation": false,
+        "imageUrl": "./assets/img/boy2.800x1000.jpg",  
+        "likes":3
+    }, {
+        "name": "Johanna",
+        "surname": "Popana",
+        "favoritePerformers": ["Dummy Data", "Dummy Data", "Dummy Data"],
+        "age": 34,
+        "gender": "female",
+        "inRelation": false,
+        "imageUrl": "./assets/img/girl2.800x1000.jpg",  
+        "likes": 6
+    }
+]

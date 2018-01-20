@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import { AngularFireDatabase, AngularFireList} from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList, AngularFireObject} from 'angularfire2/database';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 
@@ -8,31 +8,37 @@ import { Observable } from 'rxjs/Observable';
 export class FirebaseService {
   members: AngularFireList<Member>;
   // categories: AngularFireList<Category>;
+  member: AngularFireList<Member>;
  
   constructor(private af: AngularFireDatabase) {
      
    }
 
    getMembers(gender: string = null): AngularFireList<Member> {
-       if (gender != null) {
-           this.members = this.af.list('/members', 
-           	ref => ref.orderByChild('gender').equalTo(gender)) as AngularFireList<Member>;
-       } else {
-           this.members = this.af.list('/members') as AngularFireList<Member>;
-       }
-       return this.members;
+     if (gender != null) {
+         this.members = this.af.list('/members', 
+         	ref => ref.orderByChild('gender').equalTo(gender)) as AngularFireList<Member>;
+     } else {
+         this.members = this.af.list('/members') as AngularFireList<Member>;
+     }
+     return this.members;
+   }
+
+   getMember(key) {
+     // var val;
+     // val = this.af.object('/members/' + key).valueChanges();
+     // val = val.subscribe((v) => {
+     //   console.log('member: ', v);
+     // });
+     //console.log(this.getMembers());
+     //this.getMembers();
+     //return this.af.object('/members/' + key);
+     return this.af.list('/members', 
+           ref => ref.orderByKey().equalTo(key)) as AngularFireList<Member>;
+     //console.log(this.member);
    }
 
    updatePropLikes(key, newVal): void {
-     // var memberToUpdate = this.af.list('/members', 
-     //         ref => ref.orderByKey().equalTo(key)) as AngularFireList<Member>;
-     // memberToUpdate.snapshotChanges().subscribe(actions => {
-     //    actions.forEach(action => {
-     //      //console.log(action.type);
-     //      //console.log(action.key);
-     //      console.log(action.payload.val());
-     //    });
-     //  });
       this.af.object('/members/' + key)
           .update({ likes: newVal});
    }
@@ -50,9 +56,6 @@ export class FirebaseService {
    // 	   return this.businesses.remove(key);
    // }
 
-   // updateBusiness(key, newData) {
-   		
-   // }
 
 }
 
@@ -68,7 +71,3 @@ export interface Member {
    likes?: number;
 }
 
-export interface Gender {
-   $key?: string;
-   value?: string;
-}
